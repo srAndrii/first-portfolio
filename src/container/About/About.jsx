@@ -3,9 +3,10 @@ import { useEffect, useState } from 'react'
 import './About.scss'
 import { motion } from 'framer-motion'
 
-import { urlFor, client } from '../../client'
+import {AppWrapp} from '../../wraper'
 
-import { images } from '../../constants'
+
+import { urlFor, client } from '../../client'
 
 const About = () => {
     const [abouts, setAbouts]= useState([])
@@ -41,4 +42,4 @@ const About = () => {
     )
 }
 
-export default About
+export default AppWrapp(About, 'about')
